@@ -10,7 +10,7 @@ from email.mime.text import MIMEText
 
 df = pd.read_excel('mailbot.xlsx')
 
-EMAIL_ADDRESS = 'rpacomsys@outlook.co.th'
+EMAIL_ADDRESS = 'rpacomsys2@outlook.co.th'
 EMAIL_PASSWORD = 'comsys1234'
 
 with smtplib.SMTP('smtp-mail.outlook.com', 587) as smtp:
@@ -26,8 +26,8 @@ with smtplib.SMTP('smtp-mail.outlook.com', 587) as smtp:
         message = MIMEMultipart()
         message["From"] = EMAIL_ADDRESS
         message["To"] = receiver_email
-        message["Subject"] = f'Congratulation {name}'
-        body = "Congratulation of blahhhhh"
+        message["Subject"] = f'Congratulation to {name} for completing Computer Systems Course'
+        body = "Congratulation, you have been completing the computer system course in the sophomore year. Please be prepare for the junior year. Good Luck everyone."
         message.attach(MIMEText(body, "plain"))
 
         print(f"Now editing certificate for {name}")
